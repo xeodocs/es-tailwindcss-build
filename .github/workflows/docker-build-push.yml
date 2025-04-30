@@ -30,4 +30,4 @@ jobs:
           push: true
           tags: |
             xeodocs/es-tailwindcss-docs:latest
-            xeodocs/es-tailwindcss-docs:${{ github.sha }} 
+          # xeodocs/es-tailwindcss-docs:${{ github.sha }}
