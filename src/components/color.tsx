@@ -310,10 +310,10 @@ export function Color({ name, shade, value }: { name: string; shade: string; val
     let prevValue = panel.innerHTML;
     if (e.shiftKey) {
       navigator.clipboard.writeText(hexColors[name][shade]);
-      panel.innerHTML = "Copied hex value!";
+      panel.innerHTML = "¡Valor hexadecimal copiado!";
     } else {
       navigator.clipboard.writeText(value);
-      panel.innerHTML = "Copied to clipboard!";
+      panel.innerHTML = "¡Copiado al portapeles!";
     }
     setTimeout(() => {
       panel.innerHTML = prevValue;

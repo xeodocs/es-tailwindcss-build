@@ -30,7 +30,7 @@ export default function ExplainerSection() {
         </React.Fragment>,
         <span key="2"></span>,
         <React.Fragment key="3">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">12ms</span>
         </React.Fragment>,
       ],
@@ -39,7 +39,7 @@ export default function ExplainerSection() {
       class: "flex",
       terminal: [
         <React.Fragment key="4">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">668µs</span>
         </React.Fragment>,
       ],
@@ -48,7 +48,7 @@ export default function ExplainerSection() {
       class: "items-center",
       terminal: [
         <React.Fragment key="5">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">425µs</span>
         </React.Fragment>,
       ],
@@ -57,7 +57,7 @@ export default function ExplainerSection() {
       class: "bg-blue-500",
       terminal: [
         <React.Fragment key="6">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">451µs</span>
         </React.Fragment>,
       ],
@@ -66,7 +66,7 @@ export default function ExplainerSection() {
       class: "px-4",
       terminal: [
         <React.Fragment key="7">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">940µs</span>
         </React.Fragment>,
       ],
@@ -75,7 +75,7 @@ export default function ExplainerSection() {
       class: "py-3",
       terminal: [
         <React.Fragment key="7">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">2ms</span>
         </React.Fragment>,
       ],
@@ -84,7 +84,7 @@ export default function ExplainerSection() {
       class: "text-white",
       terminal: [
         <React.Fragment key="8">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">1ms</span>
         </React.Fragment>,
       ],
@@ -93,7 +93,7 @@ export default function ExplainerSection() {
       class: "hover:bg-blue-400",
       terminal: [
         <React.Fragment key="9">
-          <span>Done in </span>
+          <span>Hecho en </span>
           <span className="text-sky-300">993µs</span>
         </React.Fragment>,
       ],
@@ -111,12 +111,12 @@ export default function ExplainerSection() {
       </div>
 
       <GridContainer className="2xl:before:hidden 2xl:after:hidden">
-        <CategoryHeader className="text-pink-500 dark:text-pink-400">How it works</CategoryHeader>
+        <CategoryHeader className="text-pink-500 dark:text-pink-400">Cómo funciona</CategoryHeader>
       </GridContainer>
 
       <GridContainer>
         <h2 className="mt-4 px-2 text-[2.5rem]/10 font-medium tracking-tighter max-sm:px-4 2xl:mt-0">
-          Ship faster and smaller.
+          Envía más rápido y más pequeño.
         </h2>
       </GridContainer>
 
@@ -127,9 +127,9 @@ export default function ExplainerSection() {
 
       <GridContainer>
         <p className="max-w-(--breakpoint-md) px-2 text-base/7 text-gray-600 max-sm:px-4 dark:text-gray-400">
-          Tailwind automatically removes all unused CSS when building for production, which means your final CSS bundle
-          is the smallest it could possibly be. In fact, most Tailwind projects ship less than 10kB of CSS to the
-          client.
+          Tailwind elimina automáticamente todo el CSS no utilizado al compilar para producción, lo que significa que tu paquete final de CSS
+          es lo más pequeño posible. De hecho, la mayoría de los proyectos de Tailwind envían menos de 10kB de CSS al
+          cliente.
         </p>
       </GridContainer>
 
@@ -158,7 +158,7 @@ export default function ExplainerSection() {
                   </div>
                   <div className="flex w-full flex-col gap-1 lg:h-132.5 lg:flex-row">
                     <div className="flex flex-col gap-1 lg:w-1/2 xl:w-5/8">
-                      <Panel className="min-h-0 flex-1 max-lg:max-h-76" aria-label="panel, HTML editor, animated">
+                      <Panel className="min-h-0 flex-1 max-lg:max-h-76" aria-label="panel, editor HTML, animado">
                         <Tabs>
                           <Tab selected className="group-data-modified:italic">
                             index.html
@@ -168,7 +168,7 @@ export default function ExplainerSection() {
                         </Tabs>
                         <HtmlFile className="with-line-numbers" />
                       </Panel>
-                      <Panel className="h-32 shrink-0 lg:h-46" aria-label="panel, terminal, animated">
+                      <Panel className="h-32 shrink-0 lg:h-46" aria-label="panel, terminal, animado">
                         <Tabs>
                           <Tab selected>Terminal</Tab>
                         </Tabs>
@@ -176,7 +176,7 @@ export default function ExplainerSection() {
                       </Panel>
                     </div>
                     <div className="flex h-66 flex-col gap-2.5 lg:h-auto lg:w-1/2 xl:w-3/8">
-                      <Panel className="h-full" aria-label="panel, built CSS, animated">
+                      <Panel className="h-full" aria-label="panel, CSS compilado, animado">
                         <Tabs>
                           <Tab selected>build.css</Tab>
                         </Tabs>
@@ -197,7 +197,7 @@ export default function ExplainerSection() {
 function HtmlFile({ className }: { className?: string }) {
   return (
     <HighlightedCode
-      aria-label="editor, readonly, html file"
+      aria-label="editor, solo lectura, archivo html"
       className={clsx(
         "*:flex *:*:max-w-none *:*:shrink-0 *:*:grow *:rounded-lg *:px-3 *:py-2",
         "**:[.line]:isolate **:[.line]:block **:[.line]:not-last:min-h-[1lh]",
@@ -265,7 +265,7 @@ async function BuiltCss({ className, timeline }: { className?: string; timeline:
 
   return (
     <HighlightedCode
-      aria-label="editor, readonly, built CSS"
+      aria-label="editor, solo lectura, CSS compilado"
       className={clsx(
         "opacity-0 group-data-finished:opacity-100 group-data-running:opacity-100",
         "*:flex *:*:max-w-none *:*:shrink-0 *:*:grow *:rounded-lg *:px-4 *:py-2",
@@ -427,7 +427,7 @@ function Tabs({ children }: { children: React.ReactNode }) {
     <div
       className="sticky top-0 left-0 z-10 col-start-1 row-start-1 mb-px flex items-center gap-2 border-b border-b-white/5 bg-white/2.5 bg-clip-padding p-1 text-white backdrop-blur-lg"
       role="presentation"
-      aria-label="Tab Bar"
+      aria-label="Barra de Pestañas"
     >
       {children}
     </div>

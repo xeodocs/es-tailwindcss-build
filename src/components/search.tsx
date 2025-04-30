@@ -136,7 +136,7 @@ export function SearchProvider({ children }: React.PropsWithChildren) {
                   "product_category",
                 ],
               }}
-              placeholder="Search documentation"
+              placeholder="Buscar documentación"
               onClose={onClose}
               indexName={INDEX_NAME}
               apiKey={API_KEY}
@@ -194,11 +194,11 @@ export function SearchProvider({ children }: React.PropsWithChildren) {
 
                   if (isTailwindUI && item.hierarchy.lvl0 === "UI Blocks") {
                     if (item.hierarchy?.lvl0) {
-                      item.hierarchy.lvl0 = "Components";
+                      item.hierarchy.lvl0 = "Componentes";
                     }
 
                     if (item._highlightResult?.hierarchy?.lvl0?.value) {
-                      item._highlightResult.hierarchy.lvl0.value = "Components";
+                      item._highlightResult.hierarchy.lvl0.value = "Componentes";
                     }
                   }
 

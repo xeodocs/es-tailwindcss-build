@@ -54,6 +54,7 @@ export function Example({
           padding && "p-8",
           "@container relative overflow-auto rounded-lg bg-white outline outline-white/5 dark:bg-gray-950/50 dark:inset-ring dark:inset-ring-white/5",
           // Add layer on top of example while dragging to prevent issues with iframes
+          // Agrega una capa sobre el ejemplo mientras arrastras para prevenir problemas con iframes
           "group-data-dragging:before:absolute group-data-dragging:before:inset-0",
         )}
       >
@@ -61,7 +62,7 @@ export function Example({
       </motion.div>
       <div ref={constraintsRef} className="pointer-events-none absolute inset-y-0 right-1.5 left-60 max-sm:hidden">
         <motion.div
-          title="Drag to resize"
+          title="Arrastra para redimensionar"
           className={clsx(
             "pointer-events-auto absolute top-1/2 right-0 z-50 -mt-6 h-12 w-1.5 cursor-ew-resize rounded-full",
             "bg-slate-950/20 group-data-dragging:bg-slate-950/40 hover:bg-slate-950/40",
