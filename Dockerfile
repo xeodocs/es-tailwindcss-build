@@ -1,5 +1,5 @@
 # Stage 1: Install dependencies and build the application
-FROM node:20-alpine AS builder
+FROM node:23-alpine AS builder
 
 # Install pnpm
 RUN npm install -g pnpm
@@ -19,7 +19,7 @@ COPY . .
 RUN pnpm run build
 
 # Stage 2: Production image
-FROM node:20-alpine AS runner
+FROM node:23-alpine AS runner
 
 WORKDIR /app
 
