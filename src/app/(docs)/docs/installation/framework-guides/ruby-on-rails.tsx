@@ -4,23 +4,24 @@ import LogoDark from "@/docs/img/guides/rails-white.react.svg";
 
 export let tile: Tile = {
   title: "Ruby on Rails",
-  description: "Full-stack framework with all the tools needed to build amazing web apps.",
+  description: "Framework full-stack con todas las herramientas necesarias para construir increíbles aplicaciones web.",
   Logo,
   LogoDark,
 };
 
 export let page: Page = {
-  title: "Install Tailwind CSS with Ruby on Rails",
-  description: "Setting up Tailwind CSS in Ruby on Rails v7+ project.",
+  title: "Instalar Tailwind CSS con Ruby on Rails",
+  description: "Configurando Tailwind CSS en un proyecto Ruby on Rails v7+.",
 
-  // NOTE: This intro is not used currently but is here for reference as we'll want to bring it back once the rails gem is updated for a stable v4 release.
+  // NOTA: Esta introducción no se usa actualmente pero está aquí como referencia ya que querremos traerla de vuelta una vez que la gema de rails se actualice para una versión estable v4.
   intro: (
     <div className="prose prose-slate dark:prose-dark relative z-10 mb-16 max-w-3xl">
       <p>
-        The quickest way to start using Tailwind CSS in your Rails project is to use{" "}
-        <a href="https://github.com/rails/tailwindcss-rails">Tailwind CSS for Rails</a> by running{" "}
-        <code>rails new my-project --css tailwind</code>. This will automatically configure your Tailwind setup based on
-        the official Rails example. If you'd like to configure Tailwind manually, continue with the rest of this guide.
+        La forma más rápida de comenzar a usar Tailwind CSS en tu proyecto Rails es usar{" "}
+        <a href="https://github.com/rails/tailwindcss-rails">Tailwind CSS para Rails</a> ejecutando{" "}
+        <code>rails new my-project --css tailwind</code>. Esto configurará automáticamente tu instalación de Tailwind
+        basándose en el ejemplo oficial de Rails. Si prefieres configurar Tailwind manualmente, continúa con el resto de
+        esta guía.
       </p>
     </div>
   ),
@@ -28,11 +29,11 @@ export let page: Page = {
 
 export let steps: Step[] = [
   {
-    title: "Create your project",
+    title: "Crea tu proyecto",
     body: (
       <p>
-        Start by creating a new Rails project if you don't have one set up already. The most common approach is to use
-        the <a href="https://guides.rubyonrails.org/command_line.html">Rails Command Line</a>.
+        Comienza creando un nuevo proyecto Rails si aún no tienes uno configurado. El enfoque más común es usar la{" "}
+        <a href="https://guides.rubyonrails.org/command_line.html">Línea de comandos de Rails</a>.
       </p>
     ),
     code: {
@@ -45,11 +46,11 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Install Tailwind CSS",
+    title: "Instala Tailwind CSS",
     body: (
       <p>
-        Install the <code>tailwindcss-ruby</code> and <code>tailwindcss-rails</code> gems, and then run the install
-        command to set up Tailwind CSS in your project.
+        Instala las gemas <code>tailwindcss-ruby</code> y <code>tailwindcss-rails</code>, y luego ejecuta el comando de
+        instalación para configurar Tailwind CSS en tu proyecto.
       </p>
     ),
 
@@ -64,10 +65,10 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start your build process",
+    title: "Inicia tu proceso de build",
     body: (
       <p>
-        Run your build process with <code>./bin/dev</code>.
+        Ejecuta tu proceso de build con <code>./bin/dev</code>.
       </p>
     ),
     code: {
@@ -79,8 +80,8 @@ export let steps: Step[] = [
     },
   },
   {
-    title: "Start using Tailwind in your project",
-    body: <p>Start using Tailwind's utility classes to style your content.</p>,
+    title: "Comienza a usar Tailwind en tu proyecto",
+    body: <p>Comienza a usar las clases de utilidad de Tailwind para estilizar tu contenido.</p>,
     code: {
       name: "index.html.erb",
       lang: "html",

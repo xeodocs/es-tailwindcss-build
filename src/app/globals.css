@@ -14,7 +14,7 @@
 @theme {
   --animate-flash-code: flash-code 2s forwards;
 
-  /* This uses --color-sky-500 but it's inlined because of a bug in chrome */
+  /* Esto usa --color-sky-500 pero está inline debido a un error en Chrome */
   @keyframes flash-code {
     0% {
       background-color: oklch(0.685 0.169 237.323 / 10%);
@@ -47,18 +47,18 @@
   }
 }
 
-/* Hide scrollbar for Chrome, Safari and Opera */
+/* Ocultar barra de desplazamiento para Chrome, Safari y Opera */
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
 
-/* Hide scrollbar for IE, Edge and Firefox */
+/* Ocultar barra de desplazamiento para IE, Edge y Firefox */
 .no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
+  -ms-overflow-style: none; /* IE y Edge */
   scrollbar-width: none; /* Firefox */
 }
 
-/* Line numbers for code examples */
+/* Números de línea para ejemplos de código */
 .with-line-numbers {
   code {
     counter-reset: line;
