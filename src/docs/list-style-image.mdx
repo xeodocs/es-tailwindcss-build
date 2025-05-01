@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "list-style-image";
-export const description = "Utilities for controlling the marker images for list items.";
+export const description = "Utilidades para controlar las imágenes del marcador para los elementos de la lista.";
 
 <ApiTable
   rows={[
@@ -14,11 +14,11 @@ export const description = "Utilities for controlling the marker images for list
   ]}
 />
 
-## Examples
+## Ejemplos
 
-### Basic example
+### Ejemplo básico
 
-Use the `list-image-[<value>]` syntax to control the marker image for list items:
+Usa la sintaxis `list-image-[<value>]` para controlar la imagen del marcador para los elementos de la lista:
 
 <Figure>
 
@@ -46,9 +46,9 @@ Use the `list-image-[<value>]` syntax to control the marker image for list items
 
 </Figure>
 
-### Using a CSS variable
+### Usando una variable CSS
 
-Use the <code>list-image-{'(<custom-property>)'}</code> syntax to control the marker image for list items using a CSS variable:
+Usa la sintaxis `list-image-{(<custom-property>)}` para controlar la imagen del marcador para los elementos de la lista usando una variable CSS:
 
 ```html
 <!-- [!code classes:list-image-(--my-list-image)] -->
@@ -57,11 +57,11 @@ Use the <code>list-image-{'(<custom-property>)'}</code> syntax to control the ma
 </ul>
 ```
 
-This is just a shorthand for <code>list-image-{'[var(<custom-property>)]'}</code> that adds the `var()` function for you automatically.
+Esto es solo un atajo para `list-image-{[var(<custom-property>)]}` que agrega la función `var()` automáticamente por ti.
 
-### Removing a marker image
+### Eliminando una imagen de marcador
 
-Use the `list-image-none` utility to remove an existing marker image from list items:
+Usa la utilidad `list-image-none` para eliminar una imagen de marcador existente de los elementos de la lista:
 
 ```html
 <!-- [!code classes:list-image-none] -->

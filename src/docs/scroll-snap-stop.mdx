@@ -4,7 +4,7 @@ import { Figure } from "@/components/figure.tsx";
 import { ResponsiveDesign } from "@/components/content.tsx";
 
 export const title = "scroll-snap-stop";
-export const description = "Utilities for controlling whether you can skip past possible snap positions.";
+export const description = "Utilidades para controlar si puedes saltarte posibles posiciones de snap.";
 
 <ApiTable
   rows={[
@@ -13,13 +13,13 @@ export const description = "Utilities for controlling whether you can skip past 
   ]}
 />
 
-## Examples
+## Ejemplos
 
-### Forcing snap position stops
+### Forzar detenciones de posición de snap
 
-Use the `snap-always` utility together with the [snap-mandatory](/docs/scroll-snap-type#mandatory-scroll-snapping) utility to force a snap container to always stop on an element before the user can continue scrolling to the next item:
+Usa la utilidad `snap-always` junto con la utilidad [snap-mandatory](/docs/scroll-snap-type#mandatory-scroll-snapping) para forzar que un contenedor de snap siempre se detenga en un elemento antes de que el usuario pueda continuar desplazándose al siguiente elemento:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Desplázate en la cuadrícula de imágenes para ver el comportamiento esperado">
 
 <Example padding={false}>
   {
@@ -104,11 +104,11 @@ Use the `snap-always` utility together with the [snap-mandatory](/docs/scroll-sn
 
 </Figure>
 
-### Skipping snap position stops
+### Omitir detenciones de posición de snap
 
-Use the `snap-normal` utility to allow a snap container to skip past possible scroll snap positions:
+Usa la utilidad `snap-normal` para permitir que un contenedor de snap se salte posibles posiciones de snap del scroll:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Desplázate en la cuadrícula de imágenes para ver el comportamiento esperado">
 
 <Example padding={false}>
   {
@@ -193,6 +193,6 @@ Use the `snap-normal` utility to allow a snap container to skip past possible sc
 
 </Figure>
 
-### Responsive design
+### Diseño Responsive
 
 <ResponsiveDesign property="scroll-snap-stop" defaultClass="snap-always" featuredClass="snap-normal" />

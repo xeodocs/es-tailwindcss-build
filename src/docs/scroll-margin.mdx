@@ -5,7 +5,7 @@ import { Figure } from "@/components/figure.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "scroll-margin";
-export const description = "Utilities for controlling the scroll offset around items in a snap container.";
+export const description = "Utilidades para controlar el desplazamiento del margen alrededor de los elementos en un contenedor snap.";
 
 <ApiTable
   rows={[
@@ -26,13 +26,13 @@ export const description = "Utilities for controlling the scroll offset around i
   ])}
 />
 
-## Examples
+## Ejemplos
 
-### Basic example
+### Ejemplo básico
 
-Use the `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>`, and `scroll-ml-<number>` utilities like `scroll-ml-4` and `scroll-mt-6` to set the scroll offset around items within a snap container:
+Usa las utilidades `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>` y `scroll-ml-<number>` como `scroll-ml-4` y `scroll-mt-6` para establecer el desplazamiento del margen alrededor de los elementos dentro de un contenedor snap:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Desplázate en la cuadrícula de imágenes para ver el comportamiento esperado">
 
 <Example padding={false}>
   {
@@ -100,9 +100,9 @@ Use the `scroll-mt-<number>`, `scroll-mr-<number>`, `scroll-mb-<number>`, and `s
 
 </Figure>
 
-### Using negative values
+### Usar valores negativos
 
-To use a negative scroll margin value, prefix the class name with a dash to convert it to a negative value:
+Para usar un valor negativo de scroll margin, prefija el nombre de la clase con un guion para convertirlo en un valor negativo:
 
 ```html
 <!-- [!code classes:-scroll-ml-6] -->
@@ -111,16 +111,16 @@ To use a negative scroll margin value, prefix the class name with a dash to conv
 </div>
 ```
 
-### Using logical properties
+### Usar propiedades lógicas
 
-Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scroll-margin-inline-start` and `scroll-margin-inline-end` [logical properties](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts), which map to either the left or right side based on the text direction:
+Usa las utilidades `scroll-ms-<number>` y `scroll-me-<number>` para establecer las [propiedades lógicas](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Logical_Properties/Basic_concepts) `scroll-margin-inline-start` y `scroll-margin-inline-end`, que se asignan al lado izquierdo o derecho según la dirección del texto:
 
-<Figure hint="Scroll in the grid of images to see the expected behavior">
+<Figure hint="Desplázate en la cuadrícula de imágenes para ver el comportamiento esperado">
 
 <Example padding={false}>
   {
     <>
-      <p className="mb-4 pt-8 pl-6 text-sm font-medium">Left-to-right</p>
+      <p className="mb-4 pt-8 pl-6 text-sm font-medium">De izquierda a derecha</p>
       <div className="flex w-full snap-x gap-12 overflow-x-auto pb-10" dir="ltr">
         <div className="relative shrink-0 snap-start scroll-ms-6 first:ps-6 last:pr-[calc(100%-21.5rem)]">
           <Stripes border className="absolute start-0 top-0 bottom-0 w-6" />
@@ -158,7 +158,7 @@ Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scro
           />
         </div>
       </div>
-      <p className="mt-4 mb-4 pl-6 text-sm font-medium">Right-to-left</p>
+      <p className="mt-4 mb-4 pl-6 text-sm font-medium">De derecha a izquierda</p>
       <div className="flex w-full snap-x gap-12 overflow-x-auto pb-10" dir="rtl">
         <div className="relative shrink-0 snap-start scroll-ms-6 first:ps-6 last:pl-[calc(100%-21.5rem)]">
           <Stripes border className="absolute start-0 top-0 bottom-0 w-6" />
@@ -226,17 +226,17 @@ Use the `scroll-ms-<number>` and `scroll-me-<number>` utilities to set the `scro
 
 </Figure>
 
-For more control, you can also use the [LTR and RTL modifiers](/docs/hover-focus-and-other-states#rtl-support) to conditionally apply specific styles depending on the current text direction.
+Para mayor control, también puedes usar los [modificadores LTR y RTL](/docs/hover-focus-and-other-states#rtl-support) para aplicar estilos específicos condicionalmente según la dirección actual del texto.
 
-### Using a custom value
+### Usar un valor personalizado
 
 <UsingACustomValue utilities={["scroll-ml", "scroll-me"]} value="24rem" name="scroll margin" variable="scroll-margin" />
 
-### Responsive design
+### Diseño Responsive
 
 <ResponsiveDesign property="scroll-margin" defaultClass="scroll-m-8" featuredClass="scroll-m-0" />
 
-## Customizing your theme
+## Personalizar tu tema
 
 <CustomizingYourSpacingScale
   utilities={[
