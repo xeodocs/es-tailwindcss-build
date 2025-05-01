@@ -4,7 +4,7 @@ import { Example } from "@/components/example.tsx";
 import { Figure } from "@/components/figure.tsx";
 
 export const title = "width";
-export const description = "Utilities for setting the width of an element.";
+export const description = "Utilidades para establecer el ancho de un elemento.";
 
 <ApiTable
   rows={[
@@ -57,11 +57,11 @@ export const description = "Utilities for setting the width of an element.";
   ]}
 />
 
-## Examples
+## Ejemplos
 
-### Basic example
+### Ejemplo básico
 
-Use `w-<number>` utilities like `w-24` and `w-64` to set an element to a fixed width based on the spacing scale:
+Usa utilidades `w-<number>` como `w-24` y `w-64` para establecer un ancho fijo para un elemento basado en la escala de espaciado:
 
 <Figure>
 
@@ -94,9 +94,9 @@ Use `w-<number>` utilities like `w-24` and `w-64` to set an element to a fixed w
 
 </Figure>
 
-### Using a percentage
+### Usando un porcentaje
 
-Use `w-full` or `w-<fraction>` utilities like `w-1/2` and `w-2/5` to give an element a percentage-based width:
+Usa `w-full` o utilidades `w-<fraction>` como `w-1/2` y `w-2/5` para darle a un elemento un ancho basado en porcentaje:
 
 <Figure>
 
@@ -163,9 +163,9 @@ Use `w-full` or `w-<fraction>` utilities like `w-1/2` and `w-2/5` to give an ele
 
 </Figure>
 
-### Using the container scale
+### Usando la escala del contenedor
 
-Use utilities like `w-sm` and `w-xl` to set an element to a fixed width based on the container scale:
+Usa utilidades como `w-sm` y `w-xl` para establecer un ancho fijo para un elemento basado en la escala del contenedor:
 
 <Figure>
 
@@ -198,9 +198,9 @@ Use utilities like `w-sm` and `w-xl` to set an element to a fixed width based on
 
 </Figure>
 
-### Matching the viewport
+### Coincidiendo con el viewport
 
-Use the `w-screen` utility to make an element span the entire width of the viewport:
+Usa la utilidad `w-screen` para hacer que un elemento abarque todo el ancho del viewport:
 
 ```html
 <!-- [!code classes:w-screen] -->
@@ -209,11 +209,11 @@ Use the `w-screen` utility to make an element span the entire width of the viewp
 </div>
 ```
 
-Alternatively, you can match the width of the large, small or dynamic viewports using the `w-lvw`, `w-svw`, and `w-dvw` utilities.
+Alternativamente, puedes coincidir con el ancho de los viewports grande, pequeño o dinámico usando las utilidades `w-lvw`, `w-svw` y `w-dvw`.
 
-### Resetting the width
+### Restableciendo el ancho
 
-Use the `w-auto` utility to remove an element's assigned width under a specific condition, like at a particular breakpoint:
+Usa la utilidad `w-auto` para eliminar el ancho asignado de un elemento bajo una condición específica, como en un breakpoint particular:
 
 ```html
 <!-- [!code classes:w-full,w-auto] -->
@@ -222,9 +222,9 @@ Use the `w-auto` utility to remove an element's assigned width under a specific 
 </div>
 ```
 
-### Setting both width and height
+### Estableciendo tanto el ancho como el alto
 
-Use utilities like `size-px`, `size-4`, and `size-full` to set both the width and height of an element at the same time:
+Usa utilidades como `size-px`, `size-4` y `size-full` para establecer tanto el ancho como el alto de un elemento al mismo tiempo:
 
 <Figure>
 
@@ -251,7 +251,7 @@ Use utilities like `size-px`, `size-4`, and `size-full` to set both the width an
 
 </Figure>
 
-### Using a custom value
+### Usando un valor personalizado
 
 <UsingACustomValue utility="w" value="5px" name="width" variable="width" />
 
@@ -259,6 +259,6 @@ Use utilities like `size-px`, `size-4`, and `size-full` to set both the width an
 
 <ResponsiveDesign property="width" defaultClass="w-1/2" featuredClass="w-full" />
 
-## Customizing your theme
+## Personalizando tu tema
 
 <CustomizingYourSpacingScale utilities={["w", "size"]} />
