@@ -1,15 +1,15 @@
 import { CodeExampleStack } from "@/components/code-example";
 
-export const title = "Functions and directives";
-export const description = "A reference for the custom functions and directives Tailwind exposes to your CSS.";
+export const title = "Funciones y directivas";
+export const description = "Una referencia para las funciones y directivas personalizadas que Tailwind expone a tu CSS.";
 
-## Directives
+## Directivas
 
-Directives are custom Tailwind-specific [at-rules](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) you can use in your CSS that offer special functionality for Tailwind CSS projects.
+Las directivas son [reglas-at](https://developer.mozilla.org/en-US/docs/Web/CSS/At-rule) personalizadas específicas de Tailwind que puedes usar en tu CSS y que ofrecen funcionalidades especiales para proyectos de Tailwind CSS.
 
 <h3 id="import-directive">@import</h3>
 
-Use the `@import` directive to inline import CSS files, including Tailwind itself:
+Utiliza la directiva `@import` para importar archivos CSS en línea, incluyendo Tailwind mismo:
 
 ```css
 /* [!code filename:CSS] */
@@ -18,7 +18,7 @@ Use the `@import` directive to inline import CSS files, including Tailwind itsel
 
 <h3 id="theme-directive">@theme</h3>
 
-Use the `@theme` directive to define your project's custom design tokens, like fonts, colors, and breakpoints:
+Utiliza la directiva `@theme` para definir los tokens de diseño personalizados de tu proyecto, como fuentes, colores y puntos de interrupción:
 
 ```css
 /* [!code filename:CSS] */
@@ -41,22 +41,22 @@ Use the `@theme` directive to define your project's custom design tokens, like f
 }
 ```
 
-Learn more about customizing your theme in the [theme variables documentation](/docs/theme).
+Aprende más sobre la personalización de tu tema en la [documentación de variables de tema](/docs/theme).
 
 <h3 id="source-directive">@source</h3>
 
-Use the `@source` directive to explicitly specify source files that aren't picked up by Tailwind's automatic content detection:
+Utiliza la directiva `@source` para especificar explícitamente archivos fuente que no son detectados por la detección automática de contenido de Tailwind:
 
 ```css
 /* [!code filename:CSS] */
 @source "../node_modules/@my-company/ui-lib";
 ```
 
-Learn more about automatic content detection in the [detecting classes in source files documentation](/docs/detecting-classes-in-source-files).
+Aprende más sobre la detección automática de contenido en la [documentación de detección de clases en archivos fuente](/docs/detecting-classes-in-source-files).
 
 <h3 id="utility-directive">@utility</h3>
 
-Use the `@utility` directive to add custom utilities to your project that work with variants like `hover`, `focus` and `lg`:
+Utiliza la directiva `@utility` para agregar utilidades personalizadas a tu proyecto que funcionan con variantes como `hover`, `focus` y `lg`:
 
 ```css
 /* [!code filename:CSS] */
@@ -65,11 +65,11 @@ Use the `@utility` directive to add custom utilities to your project that work w
 }
 ```
 
-Learn more about registering custom utilities in the [adding custom utilities documentation](/docs/adding-custom-styles#adding-custom-utilities).
+Aprende más sobre el registro de utilidades personalizadas en la [documentación de adición de utilidades personalizadas](/docs/adding-custom-styles#adding-custom-utilities).
 
 <h3 id="variant-directive">@variant</h3>
 
-Use the `@variant` directive to apply a Tailwind variant to styles in your CSS:
+Utiliza la directiva `@variant` para aplicar una variante de Tailwind a los estilos en tu CSS:
 
 ```css
 /* [!code filename:CSS] */
@@ -83,24 +83,24 @@ Use the `@variant` directive to apply a Tailwind variant to styles in your CSS:
 }
 ```
 
-Learn more using variants in the [using variants documentation](/docs/adding-custom-styles#using-variants).
+Aprende más sobre el uso de variantes en la [documentación de uso de variantes](/docs/adding-custom-styles#using-variants).
 
 <h3 id="custom-variant-directive">@custom-variant</h3>
 
-Use the `@custom-variant` directive to add a custom variant in your project:
+Utiliza la directiva `@custom-variant` para agregar una variante personalizada en tu proyecto:
 
 ```css
 /* [!code filename:CSS] */
 @custom-variant theme-midnight (&:where([data-theme="midnight"] *));
 ```
 
-This lets you write utilities `theme-midnight:bg-black` and `theme-midnight:text-white`.
+Esto te permite escribir utilidades como `theme-midnight:bg-black` y `theme-midnight:text-white`.
 
-Learn more about adding custom variants in the [adding custom variants documentation](/docs/adding-custom-styles#adding-custom-variants).
+Aprende más sobre la adición de variantes personalizadas en la [documentación de adición de variantes personalizadas](/docs/adding-custom-styles#adding-custom-variants).
 
 <h3 id="apply-directive">@apply</h3>
 
-Use the `@apply` directive to inline any existing utility classes into your own custom CSS:
+Utiliza la directiva `@apply` para insertar cualquier clase de utilidad existente en tu propio CSS personalizado:
 
 ```css
 /* [!code filename:CSS] */
@@ -120,18 +120,18 @@ Use the `@apply` directive to inline any existing utility classes into your own 
 }
 ```
 
-This is useful when you need to write custom CSS (like to override the styles in a third-party library) but still want to work with your design tokens and use the same syntax you’re used to using in your HTML.
+Esto es útil cuando necesitas escribir CSS personalizado (como para sobrescribir los estilos en una biblioteca de terceros) pero aún quieres trabajar con tus tokens de diseño y usar la misma sintaxis que estás acostumbrado a usar en tu HTML.
 
 <h3 id="reference-directive">@reference</h3>
 
-If you want to use `@apply` or `@variant` in the `<style>` block of a Vue or Svelte component, or within CSS modules, you will need to import your theme variables, custom utilities, and custom variants to make those values available in that context.
+Si quieres usar `@apply` o `@variant` en el bloque `<style>` de un componente Vue o Svelte, o dentro de módulos CSS, necesitarás importar tus variables de tema, utilidades personalizadas y variantes personalizadas para hacer que esos valores estén disponibles en ese contexto.
 
-To do this without duplicating any CSS in your output, use the `@reference` directive to import your main stylesheet for reference without actually including the styles:
+Para hacer esto sin duplicar ningún CSS en tu salida, usa la directiva `@reference` para importar tu hoja de estilos principal como referencia sin incluir realmente los estilos:
 
 ```html
 <!-- [!code filename:Vue] -->
 <template>
-  <h1>Hello world!</h1>
+  <h1>¡Hola mundo!</h1>
 </template>
 
 <style>
@@ -144,12 +144,12 @@ To do this without duplicating any CSS in your output, use the `@reference` dire
 </style>
 ```
 
-If you’re just using the default theme with no customizations, you can import `tailwindcss` directly:
+Si solo estás usando el tema predeterminado sin personalizaciones, puedes importar `tailwindcss` directamente:
 
 ```html
 <!-- [!code filename:Vue] -->
 <template>
-  <h1>Hello world!</h1>
+  <h1>¡Hola mundo!</h1>
 </template>
 
 <style>
@@ -162,13 +162,13 @@ If you’re just using the default theme with no customizations, you can import 
 </style>
 ```
 
-## Functions
+## Funciones
 
-Tailwind provides the following build-time functions to make working with colors and the spacing scale easier.
+Tailwind proporciona las siguientes funciones en tiempo de compilación para facilitar el trabajo con colores y la escala de espaciado.
 
 <h3 id="alpha-function">--alpha()</h3>
 
-Use the `--alpha()` function to adjust the opacity of a color:
+Utiliza la función `--alpha()` para ajustar la opacidad de un color:
 
 <CodeExampleStack>
 
@@ -191,7 +191,7 @@ Use the `--alpha()` function to adjust the opacity of a color:
 
 <h3 id="spacing-function">--spacing()</h3>
 
-Use the `--spacing()` function to generate a spacing value based on your theme:
+Utiliza la función `--spacing()` para generar un valor de espaciado basado en tu tema:
 
 <CodeExampleStack>
 
@@ -212,7 +212,7 @@ Use the `--spacing()` function to generate a spacing value based on your theme:
 
 </CodeExampleStack>
 
-This can also be useful in arbitrary values, especially in combination with `calc()`:
+Esto también puede ser útil en valores arbitrarios, especialmente en combinación con `calc()`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -222,35 +222,35 @@ This can also be useful in arbitrary values, especially in combination with `cal
 </div>
 ```
 
-## Compatibility
+## Compatibilidad
 
-The following directives and functions exist solely for compatibility with Tailwind CSS v3.x.
+Las siguientes directivas y funciones existen únicamente para compatibilidad con Tailwind CSS v3.x.
 
 <h3 id="config-directive">@config</h3>
 
-Use the `@config` directive to load a legacy JavaScript-based configuration file:
+Utiliza la directiva `@config` para cargar un archivo de configuración heredado basado en JavaScript:
 
 ```css
 /* [!code filename:CSS] */
 @config "../../tailwind.config.js";
 ```
 
-The `corePlugins`, `safelist`, and `separator` options from the JavaScript-based config are not supported in v4.0.
+Las opciones `corePlugins`, `safelist`, y `separator` de la configuración basada en JavaScript no son compatibles en v4.0.
 
 <h3 id="plugin-directive">@plugin</h3>
 
-Use the `@plugin` directive to load a legacy JavaScript-based plugin:
+Utiliza la directiva `@plugin` para cargar un plugin heredado basado en JavaScript:
 
 ```css
 /* [!code filename:CSS] */
 @plugin "@tailwindcss/typography";
 ```
 
-The `@plugin` directive accepts either a package name or a local path.
+La directiva `@plugin` acepta ya sea un nombre de paquete o una ruta local.
 
 <h3 id="theme-function">theme()</h3>
 
-Use the `theme()` function to access your Tailwind theme values using dot notation:
+Utiliza la función `theme()` para acceder a los valores de tu tema de Tailwind usando notación de puntos:
 
 ```css
 /* [!code filename:CSS] */
@@ -260,4 +260,4 @@ Use the `theme()` function to access your Tailwind theme values using dot notati
 }
 ```
 
-This function is deprecated, and we recommend [using CSS theme variables](/docs/theme#using-your-theme-variables) instead.
+Esta función está obsoleta, y recomendamos [usar variables de tema CSS](/docs/theme#using-your-theme-variables) en su lugar.

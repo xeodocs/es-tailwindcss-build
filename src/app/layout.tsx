@@ -5,6 +5,7 @@ import { SearchProvider } from "@/components/search";
 import { ThemeProvider } from "@/components/theme-toggle";
 import Fathom from "@/components/fathom";
 import Script from "next/script";
+import GoogleAnalytics from "@/components/GoogleAnalytics";
 
 const inter = localFont({
   src: [
@@ -167,6 +168,7 @@ export default async function RootLayout({
           no se ejecuta al renderizar una página not-found.
          */}
         <Script src={`data:text/javascript;base64,${btoa(darkModeScript)}`} />
+        <GoogleAnalytics measurementId="G-S4SJSSGE4G" />
       </head>
       <body>
         <Fathom />

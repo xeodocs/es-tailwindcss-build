@@ -5,7 +5,7 @@ import { ResponsiveDesign } from "@/components/content.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 
 export const title = "box-sizing";
-export const description = "Utilities for controlling how the browser should calculate an element's total size.";
+export const description = "Utilidades para controlar cómo el navegador debe calcular el tamaño total de un elemento.";
 
 <ApiTable
   rows={[
@@ -14,13 +14,13 @@ export const description = "Utilities for controlling how the browser should cal
   ]}
 />
 
-## Examples
+## Ejemplos
 
-### Including borders and padding
+### Incluyendo bordes y padding
 
-Use the `box-border` utility to set an element's `box-sizing` to `border-box`, telling the browser to include the element's borders and padding when you give it a height or width.
+Usa la utilidad `box-border` para establecer el `box-sizing` de un elemento en `border-box`, indicando al navegador que incluya los bordes y el padding del elemento cuando le asignas una altura o anchura.
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will be rendered as 100px &times; 100px, with an internal content area of 88px &times; 88px:
+Esto significa que un elemento de 100px &times; 100px con un borde de 2px y 4px de padding en todos los lados se renderizará como 100px &times; 100px, con un área de contenido interna de 88px &times; 88px:
 
 <Figure>
 
@@ -92,13 +92,13 @@ This means a 100px &times; 100px element with a 2px border and 4px of padding on
 
 </Figure>
 
-Tailwind makes this the default for all elements in our [preflight base styles](/docs/preflight).
+Tailwind establece esto como predeterminado para todos los elementos en nuestros [estilos base preflight](/docs/preflight).
 
-### Excluding borders and padding
+### Excluyendo bordes y padding
 
-Use the `box-content` utility to set an element's `box-sizing` to `content-box`, telling the browser to add borders and padding on top of the element's specified width or height.
+Usa la utilidad `box-content` para establecer el `box-sizing` de un elemento en `content-box`, indicando al navegador que agregue bordes y padding sobre la anchura o altura especificada del elemento.
 
-This means a 100px &times; 100px element with a 2px border and 4px of padding on all sides will actually be rendered as 112px &times; 112px, with an internal content area of 100px &times; 100px:
+Esto significa que un elemento de 100px &times; 100px con un borde de 2px y 4px de padding en todos los lados se renderizará realmente como 112px &times; 112px, con un área de contenido interna de 100px &times; 100px:
 
 <Figure>
 
@@ -170,6 +170,6 @@ This means a 100px &times; 100px element with a 2px border and 4px of padding on
 
 </Figure>
 
-### Responsive design
+### Diseño Responsive
 
 <ResponsiveDesign property="box-sizing" defaultClass="box-content" featuredClass="box-border" />

@@ -4,10 +4,10 @@ import { ColorPalette } from "../components/color-palette.tsx";
 import { Stripes } from "@/components/stripes.tsx";
 import { TipGood, TipBad, TipCompat, TipInfo } from "@/components/tips";
 
-export const title = "Colors";
-export const description = "Using and customizing the color palette in Tailwind CSS projects.";
+export const title = "Colores";
+export const description = "Usando y personalizando la paleta de colores en proyectos de Tailwind CSS.";
 
-Tailwind CSS includes a vast, beautiful color palette out of the box, carefully crafted by expert designers and suitable for a wide range of different design styles.
+Tailwind CSS incluye una vasta y hermosa paleta de colores lista para usar, cuidadosamente elaborada por diseñadores expertos y adecuada para una amplia gama de estilos de diseño diferentes.
 
 <div className="my-10">
   {/* <TipInfo>{<>Click to copy OKLCH, shift+click to copy nearest hex</>}</TipInfo> */}
@@ -16,7 +16,7 @@ Tailwind CSS includes a vast, beautiful color palette out of the box, carefully 
   {/* </div> */}
 </div>
 
-Every color in the default palette includes 11 steps, with 50 being the lightest, and 950 being the darkest:
+Cada color en la paleta predeterminada incluye 11 pasos, siendo 50 el más claro y 950 el más oscuro:
 
 <Figure>
 
@@ -88,13 +88,13 @@ Every color in the default palette includes 11 steps, with 50 being the lightest
 
 </Figure>
 
-The entire color palette is available across all color related utilities, including things like [background color](/docs/background-color), [border color](/docs/border-color), [fill](/docs/fill), [caret color](/docs/caret-color), and many more.
+La paleta de colores completa está disponible en todas las utilidades relacionadas con el color, incluyendo cosas como [color de fondo](/docs/background-color), [color de borde](/docs/border-color), [relleno](/docs/fill), [color del cursor](/docs/caret-color) y muchas más.
 
-## Working with colors
+## Trabajando con colores
 
-### Using color utilities
+### Usando utilidades de color
 
-Use color utilities like `bg-white`, `border-pink-300`, and `text-gray-950` to set the different color properties of elements in your design:
+Usa utilidades de color como `bg-white`, `border-pink-300` y `text-gray-950` para establecer las diferentes propiedades de color de los elementos en tu diseño:
 
 <Figure>
 
@@ -119,8 +119,8 @@ Use color utilities like `bg-white`, `border-pink-300`, and `text-gray-950` to s
         </span>
         <div>
           <p className="text-gray-700 dark:text-gray-400">
-            <span className="font-medium text-gray-950 dark:text-white">Tom Watson</span> mentioned you in{" "}
-            <span className="font-medium text-gray-950 dark:text-white">Logo redesign</span>
+            <span className="font-medium text-gray-950 dark:text-white">Tom Watson</span> te mencionó en
+            <span className="font-medium text-gray-950 dark:text-white">Rediseño de logo</span>
           </p>
           <p className="mt-1 text-gray-500">9:37am</p>
         </div>
@@ -138,8 +138,8 @@ Use color utilities like `bg-white`, `border-pink-300`, and `text-gray-950` to s
   </span>
   <div>
     <p class="text-gray-700 dark:text-gray-400">
-      <span class="font-medium text-gray-950 dark:text-white">Tom Watson</span> mentioned you in
-      <span class="font-medium text-gray-950 dark:text-white">Logo redesign</span>
+      <span class="font-medium text-gray-950 dark:text-white">Tom Watson</span> te mencionó en
+      <span class="font-medium text-gray-950 dark:text-white">Rediseño de logo</span>
     </p>
     <time class="mt-1 block text-gray-500" datetime="9:37">9:37am</time>
   </div>
@@ -148,15 +148,14 @@ Use color utilities like `bg-white`, `border-pink-300`, and `text-gray-950` to s
 
 </Figure>
 
-Here's a full list of utilities that use your color palette:
+Aquí tienes una lista completa de utilidades que usan tu paleta de colores:
 
 {
-
 <table>
   <thead>
     <tr>
-      <th>Utility</th>
-      <th>Description</th>
+      <th>Utilidad</th>
+      <th>Descripción</th>
     </tr>
   </thead>
   <tbody>
@@ -165,7 +164,7 @@ Here's a full list of utilities that use your color palette:
         <code>bg-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/background-color">background color</a> of an element
+        Establece el <a href="/docs/background-color">color de fondo</a> de un elemento
       </td>
     </tr>
     <tr>
@@ -173,7 +172,7 @@ Here's a full list of utilities that use your color palette:
         <code>text-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/text-color">text color</a> of an element
+        Establece el <a href="/docs/text-color">color de texto</a> de un elemento
       </td>
     </tr>
     <tr>
@@ -181,7 +180,7 @@ Here's a full list of utilities that use your color palette:
         <code>decoration-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/text-decoration-color">text decoration color</a> of an element
+        Establece el <a href="/docs/text-decoration-color">color de la decoración del texto</a> de un elemento
       </td>
     </tr>
     <tr>
@@ -189,7 +188,7 @@ Here's a full list of utilities that use your color palette:
         <code>border-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/border-color">border color</a> of an element
+        Establece el <a href="/docs/border-color">color del borde</a> de un elemento
       </td>
     </tr>
     <tr>
@@ -197,7 +196,7 @@ Here's a full list of utilities that use your color palette:
         <code>outline-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/outline-color">outline color</a> of an element
+        Establece el <a href="/docs/outline-color">color del contorno</a> de un elemento
       </td>
     </tr>
     <tr>
@@ -205,7 +204,7 @@ Here's a full list of utilities that use your color palette:
         <code>shadow-*</code>
       </td>
       <td>
-        Sets the color of <a href="/docs/box-shadow#setting-the-shadow-color">box shadows</a>
+        Establece el color de las <a href="/docs/box-shadow#setting-the-shadow-color">sombras de caja</a>
       </td>
     </tr>
     <tr>
@@ -213,7 +212,7 @@ Here's a full list of utilities that use your color palette:
         <code>inset-shadow-*</code>
       </td>
       <td>
-        Sets the color of <a href="/docs/box-shadow#setting-the-inset-shadow-color">inset box shadows</a>
+        Establece el color de las <a href="/docs/box-shadow#setting-the-inset-shadow-color">sombras de caja inset</a>
       </td>
     </tr>
     <tr>
@@ -221,7 +220,7 @@ Here's a full list of utilities that use your color palette:
         <code>ring-*</code>
       </td>
       <td>
-        Sets the color of <a href="/docs/box-shadow#setting-the-ring-color">ring shadows</a>
+        Establece el color de los <a href="/docs/box-shadow#setting-the-ring-color">anillos de sombra</a>
       </td>
     </tr>
     <tr>
@@ -229,7 +228,7 @@ Here's a full list of utilities that use your color palette:
         <code>inset-ring-*</code>
       </td>
       <td>
-        Sets the color of <a href="/docs/box-shadow#setting-the-inset-ring-color">inset ring shadows</a>
+        Establece el color de los <a href="/docs/box-shadow#setting-the-inset-ring-color">anillos de sombra inset</a>
       </td>
     </tr>
     <tr>
@@ -237,7 +236,7 @@ Here's a full list of utilities that use your color palette:
         <code>accent-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/accent-color">accent color</a> of form controls
+        Establece el <a href="/docs/accent-color">color de acento</a> de los controles de formulario
       </td>
     </tr>
     <tr>
@@ -245,7 +244,7 @@ Here's a full list of utilities that use your color palette:
         <code>caret-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/caret-color">caret color</a> in form controls
+        Establece el <a href="/docs/caret-color">color del cursor</a> en los controles de formulario
       </td>
     </tr>
     <tr>
@@ -253,7 +252,7 @@ Here's a full list of utilities that use your color palette:
         <code>fill-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/fill">fill color</a> of SVG elements
+        Establece el <a href="/docs/fill">color de relleno</a> de los elementos SVG
       </td>
     </tr>
     <tr>
@@ -261,16 +260,16 @@ Here's a full list of utilities that use your color palette:
         <code>stroke-*</code>
       </td>
       <td>
-        Sets the <a href="/docs/stroke">stroke color</a> of SVG elements
+        Establece el <a href="/docs/stroke">color de trazo</a> de los elementos SVG
       </td>
     </tr>
   </tbody>
 </table>
 }
 
-### Adjusting opacity
+### Ajustando la opacidad
 
-You can adjust the opacity of a color using syntax like `bg-black/75`, where `75` sets the alpha channel of the color to 75%:
+Puedes ajustar la opacidad de un color usando una sintaxis como `bg-black/75`, donde `75` establece el canal alfa del color al 75%:
 
 <Figure>
 
@@ -340,7 +339,7 @@ You can adjust the opacity of a color using syntax like `bg-black/75`, where `75
 
 </Figure>
 
-This syntax also supports arbitrary values and the CSS variable shorthand:
+Esta sintaxis también admite valores arbitrarios y la abreviatura de variables CSS:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -349,9 +348,9 @@ This syntax also supports arbitrary values and the CSS variable shorthand:
 <div class="bg-cyan-400/(--my-alpha-value)"><!-- ... --></div>
 ```
 
-### Targeting dark mode
+### Apuntando al modo oscuro
 
-Use the `dark` variant to write classes like `dark:bg-gray-800` that only apply a color when dark mode is active:
+Usa la variante `dark` para escribir clases como `dark:bg-gray-800` que solo aplican un color cuando el modo oscuro está activo:
 
 <Figure>
 
@@ -359,7 +358,7 @@ Use the `dark` variant to write classes like `dark:bg-gray-800` that only apply 
   {
     <div className="grid grid-cols-1 sm:grid-cols-2">
       <div className="p-8 pt-7">
-        <p className="mb-2 text-sm font-medium text-gray-500">Light mode</p>
+        <p className="mb-2 text-sm font-medium text-gray-500">Modo claro</p>
         <div className="rounded-lg bg-white px-6 py-8 shadow-xl ring ring-gray-900/5">
           <div>
             <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
@@ -380,16 +379,16 @@ Use the `dark` variant to write classes like `dark:bg-gray-800` that only apply 
               </svg>
             </span>
           </div>
-          <p className="mt-5 text-base font-medium tracking-tight text-gray-900">Writes upside-down</p>
+          <p className="mt-5 text-base font-medium tracking-tight text-gray-900">Escribe boca abajo</p>
           <p
             className="mt-2 text-sm text-gray-500"
-            children={`The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.`}
+            children={`El Zero Gravity Pen se puede usar para escribir en cualquier orientación,
+          incluyendo boca abajo. Incluso funciona en el espacio exterior.`}
           />
         </div>
       </div>
       <div className="bg-gray-900 p-8 pt-7">
-        <p className="mb-2 text-sm font-medium text-gray-400">Dark mode</p>
+        <p className="mb-2 text-sm font-medium text-gray-400">Modo oscuro</p>
         <div className="rounded-lg bg-gray-800 px-6 py-8 shadow-xl ring ring-gray-900/5">
           <div>
             <span className="inline-flex items-center justify-center rounded-md bg-indigo-500 p-2 shadow-lg">
@@ -410,11 +409,11 @@ Use the `dark` variant to write classes like `dark:bg-gray-800` that only apply 
               </svg>
             </span>
           </div>
-          <p className="mt-5 text-base font-medium tracking-tight text-white">Writes upside-down</p>
+          <p className="mt-5 text-base font-medium tracking-tight text-white">Escribe boca abajo</p>
           <p
             className="mt-2 text-sm text-gray-400"
-            children={`The Zero Gravity Pen can be used to write in any orientation,
-          including upside-down. It even works in outer space.`}
+            children={`El Zero Gravity Pen se puede usar para escribir en cualquier orientación,
+          incluyendo boca abajo. Incluso funciona en el espacio exterior.`}
           />
         </div>
       </div>
@@ -435,22 +434,22 @@ Use the `dark` variant to write classes like `dark:bg-gray-800` that only apply 
   </div>
   <!-- prettier-ignore -->
   <!-- [!code word:dark\:text-white] -->
-  <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Writes upside-down</h3>
+  <h3 class="text-gray-900 dark:text-white mt-5 text-base font-medium tracking-tight ">Escribe boca abajo</h3>
   <!-- prettier-ignore -->
   <!-- [!code word:dark\:text-gray-400] -->
   <p class="text-gray-500 dark:text-gray-400 mt-2 text-sm ">
-    The Zero Gravity Pen can be used to write in any orientation, including upside-down. It even works in outer space.
+    El Zero Gravity Pen se puede usar para escribir en cualquier orientación, incluyendo boca abajo. Incluso funciona en el espacio exterior.
   </p>
 </div>
 ```
 
 </Figure>
 
-Learn more about styling for dark mode in the [dark mode documentation](/docs/dark-mode).
+Aprende más sobre el estilo para el modo oscuro en la [documentación del modo oscuro](/docs/dark-mode).
 
-### Referencing in CSS
+### Referenciando en CSS
 
-Colors are exposed as CSS variables in the `--color-*` namespace, so you can reference them in CSS with variables like `--color-blue-500` and `--color-pink-700`:
+Los colores se exponen como variables CSS en el espacio de nombres `--color-*`, por lo que puedes referenciarlos en CSS con variables como `--color-blue-500` y `--color-pink-700`:
 
 ```css
 /* [!code filename:CSS] */
@@ -472,7 +471,7 @@ Colors are exposed as CSS variables in the `--color-*` namespace, so you can ref
 }
 ```
 
-You can also use these as [arbitrary values]() in utility classes:
+También puedes usarlos como [valores arbitrarios]() en clases de utilidad:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -482,7 +481,7 @@ You can also use these as [arbitrary values]() in utility classes:
 </div>
 ```
 
-To quickly adjust the opacity of a color when referencing it as a variable in CSS, Tailwind includes a special <code>--alpha()</code> function:
+Para ajustar rápidamente la opacidad de un color al referenciarlo como una variable en CSS, Tailwind incluye una función especial <code>--alpha()</code>:
 
 ```css
 /* [!code filename:CSS] */
@@ -496,9 +495,9 @@ To quickly adjust the opacity of a color when referencing it as a variable in CS
 }
 ```
 
-## Customizing your colors
+## Personalizando tus colores
 
-Use `@theme` to add custom colors to your project under the `--color-*` theme namespace:
+Usa `@theme` para agregar colores personalizados a tu proyecto bajo el espacio de nombres del tema `--color-*`:
 
 ```css
 /* [!code filename:CSS] */
@@ -512,13 +511,13 @@ Use `@theme` to add custom colors to your project under the `--color-*` theme na
 }
 ```
 
-Now utilities like `bg-midnight`, `text-tahiti`, and `fill-bermuda` will be available in your project in addition to the default colors.
+Ahora utilidades como `bg-midnight`, `text-tahiti` y `fill-bermuda` estarán disponibles en tu proyecto además de los colores predeterminados.
 
-Learn more about theme variables in the [theme variables documentation](/docs/theme).
+Aprende más sobre las variables de tema en la [documentación de variables de tema](/docs/theme).
 
-### Overriding default colors
+### Sobrescribiendo colores predeterminados
 
-Override any of the default colors by defining new theme variables with the same name:
+Sobrescribe cualquiera de los colores predeterminados definiendo nuevas variables de tema con el mismo nombre:
 
 ```css
 /* [!code filename:CSS] */
@@ -540,9 +539,9 @@ Override any of the default colors by defining new theme variables with the same
 }
 ```
 
-### Disabling default colors
+### Deshabilitando colores predeterminados
 
-Disable any default color by setting the theme namespace for that color to `initial`:
+Deshabilita cualquier color predeterminado estableciendo el espacio de nombres del tema para ese color en `initial`:
 
 ```css
 /* [!code filename:CSS] */
@@ -555,11 +554,11 @@ Disable any default color by setting the theme namespace for that color to `init
 }
 ```
 
-This is especially useful for removing the corresponding CSS variables from your output for colors you don't intend to use.
+Esto es especialmente útil para eliminar las variables CSS correspondientes de tu salida para los colores que no pretendes usar.
 
-### Using a custom palette
+### Usando una paleta personalizada
 
-Use `--color-*: initial` to completely disable all of the default colors and define your own custom color palette:
+Usa `--color-*: initial` para deshabilitar completamente todos los colores predeterminados y definir tu propia paleta de colores personalizada:
 
 ```css
 /* [!code filename:CSS] */
@@ -576,9 +575,9 @@ Use `--color-*: initial` to completely disable all of the default colors and def
 }
 ```
 
-### Referencing other variables
+### Referenciando otras variables
 
-Use `@theme inline` when defining colors that reference other colors:
+Usa `@theme inline` al definir colores que hacen referencia a otros colores:
 
 ```css
 /* [!code filename:CSS] */
@@ -598,11 +597,11 @@ Use `@theme inline` when defining colors that reference other colors:
 }
 ```
 
-Learn more in the theme documentation on [referencing other variables](/docs/theme#referencing-other-variables).
+Aprende más en la documentación del tema sobre [referenciar otras variables](/docs/theme#referencing-other-variables).
 
-## Default color palette reference
+## Referencia de la paleta de colores predeterminada
 
-Here's a complete list of the default colors and their values for reference:
+Aquí tienes una lista completa de los colores predeterminados y sus valores como referencia:
 
 ```css
 /* [!code filename:CSS] */
@@ -876,4 +875,4 @@ Here's a complete list of the default colors and their values for reference:
 }
 ```
 
-This can be useful if you want to reuse any of these scales but under a different name, like redefining `--color-gray-*` to use the `--color-slate-*` scale.
+Esto puede ser útil si quieres reutilizar alguna de estas escalas pero con un nombre diferente, como redefinir `--color-gray-*` para usar la escala `--color-slate-*`.
