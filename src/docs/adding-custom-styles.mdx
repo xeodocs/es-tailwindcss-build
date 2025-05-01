@@ -1,17 +1,17 @@
 import { CodeExampleStack } from "@/components/code-example";
 
 export const title = "Adding custom styles";
-export const description = "Best practices for adding your own custom styles in Tailwind projects.";
+export const description = "Mejores prácticas para agregar tus propios estilos personalizados en proyectos de Tailwind.";
 
-Often the biggest challenge when working with a framework is figuring out what you’re supposed to do when there’s something you need that the framework doesn’t handle for you.
+A menudo, el mayor desafío al trabajar con un framework es descubrir qué se supone que debes hacer cuando hay algo que necesitas que el framework no maneja por ti.
 
-Tailwind has been designed from the ground up to be extensible and customizable, so that no matter what you’re building you never feel like you’re fighting the framework.
+Tailwind ha sido diseñado desde cero para ser extensible y personalizable, de modo que no importa lo que estés construyendo, nunca sientas que estás luchando contra el framework.
 
-This guide covers topics like customizing your design tokens, how to break out of those constraints when necessary, adding your own custom CSS, and extending the framework with plugins.
+Esta guía cubre temas como la personalización de tus tokens de diseño, cómo salir de esas restricciones cuando sea necesario, agregar tu propio CSS personalizado y extender el framework con plugins.
 
-## Customizing your theme
+## Personalizando tu tema
 
-If you want to change things like your color palette, spacing scale, typography scale, or breakpoints, add your customizations using the `@theme` directive in your CSS:
+Si deseas cambiar cosas como tu paleta de colores, escala de espaciado, escala de tipografía o breakpoints, agrega tus personalizaciones usando la directiva `@theme` en tu CSS:
 
 ```css
 /* [!code filename:CSS] */
@@ -34,13 +34,13 @@ If you want to change things like your color palette, spacing scale, typography 
 }
 ```
 
-Learn more about customizing your theme in the [theme variables documentation](/docs/theme).
+Obtén más información sobre cómo personalizar tu tema en la [documentación de variables de tema](/docs/theme).
 
-## Using arbitrary values
+## Usando valores arbitrarios
 
-While you can usually build the bulk of a well-crafted design using a constrained set of design tokens, once in a while you need to break out of those constraints to get things pixel-perfect.
+Si bien generalmente puedes construir la mayor parte de un diseño bien elaborado utilizando un conjunto restringido de tokens de diseño, de vez en cuando necesitas salir de esas restricciones para que las cosas queden perfectas al píxel.
 
-When you find yourself really needing something like `top: 117px` to get a background image in just the right spot, use Tailwind's square bracket notation to generate a class on the fly with any arbitrary value:
+Cuando realmente necesites algo como `top: 117px` para colocar una imagen de fondo en el lugar exacto, usa la notación de corchetes de Tailwind para generar una clase sobre la marcha con cualquier valor arbitrario:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -50,7 +50,7 @@ When you find yourself really needing something like `top: 117px` to get a backg
 </div>
 ```
 
-This is basically like inline styles, with the major benefit that you can combine it with interactive modifiers like `hover` and responsive modifiers like `lg`:
+Esto es básicamente como estilos en línea, con el gran beneficio de que puedes combinarlo con modificadores interactivos como `hover` y modificadores responsive como `lg`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -60,7 +60,7 @@ This is basically like inline styles, with the major benefit that you can combin
 </div>
 ```
 
-This works for everything in the framework, including things like background colors, font sizes, pseudo-element content, and more:
+Esto funciona para todo en el framework, incluidas cosas como colores de fondo, tamaños de fuente, contenido de pseudo-elementos y más:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -70,7 +70,7 @@ This works for everything in the framework, including things like background col
 </div>
 ```
 
-If you're referencing a CSS variable as an arbitrary value, you can use the custom property syntax:
+Si estás haciendo referencia a una variable CSS como un valor arbitrario, puedes usar la sintaxis de propiedad personalizada:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -80,11 +80,11 @@ If you're referencing a CSS variable as an arbitrary value, you can use the cust
 </div>
 ```
 
-This is just a shorthand for <code>fill-{'[var(--my-brand-color)]'}</code> that adds the `var()` function for you automatically.
+Esto es solo un atajo para <code>fill-{'[var(--my-brand-color)]'}</code> que agrega la función `var()` automáticamente.
 
-### Arbitrary properties
+### Propiedades arbitrarias
 
-If you ever need to use a CSS property that Tailwind doesn't include a utility for out of the box, you can also use square bracket notation to write completely arbitrary CSS:
+Si alguna vez necesitas usar una propiedad CSS para la que Tailwind no incluye una utilidad lista para usar, también puedes usar la notación de corchetes para escribir CSS completamente arbitrario:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -94,7 +94,7 @@ If you ever need to use a CSS property that Tailwind doesn't include a utility f
 </div>
 ```
 
-This is _really_ like inline styles, but again with the benefit that you can use modifiers:
+Esto es _realmente_ como estilos en línea, pero nuevamente con el beneficio de que puedes usar modificadores:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -104,7 +104,7 @@ This is _really_ like inline styles, but again with the benefit that you can use
 </div>
 ```
 
-This can be useful for things like CSS variables as well, especially when they need to change under different conditions:
+Esto también puede ser útil para cosas como variables CSS, especialmente cuando necesitan cambiar bajo diferentes condiciones:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -114,9 +114,9 @@ This can be useful for things like CSS variables as well, especially when they n
 </div>
 ```
 
-### Arbitrary variants
+### Variantes arbitrarias
 
-Arbitrary _variants_ are like arbitrary values but for doing on-the-fly selector modification, like you can with built-in pseudo-class variants like `hover:{utility}` or responsive variants like `md:{utility}` but using square bracket notation directly in your HTML.
+Las _variantes_ arbitrarias son como valores arbitrarios pero para hacer modificaciones de selector sobre la marcha, como puedes hacer con variantes de pseudo-clases incorporadas como `hover:{utility}` o variantes responsive como `md:{utility}` pero usando la notación de corchetes directamente en tu HTML.
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -128,11 +128,11 @@ Arbitrary _variants_ are like arbitrary values but for doing on-the-fly selector
 </ul>
 ```
 
-Learn more in the [arbitrary variants](/docs/hover-focus-and-other-states#using-arbitrary-variants) documentation.
+Obtén más información en la documentación de [variantes arbitrarias](/docs/hover-focus-and-other-states#using-arbitrary-variants).
 
-### Handling whitespace
+### Manejo de espacios en blanco
 
-When an arbitrary value needs to contain a space, use an underscore (`_`) instead and Tailwind will automatically convert it to a space at build-time:
+Cuando un valor arbitrario necesita contener un espacio, usa un guion bajo (`_`) en su lugar y Tailwind lo convertirá automáticamente en un espacio en tiempo de compilación:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -142,7 +142,7 @@ When an arbitrary value needs to contain a space, use an underscore (`_`) instea
 </div>
 ```
 
-In situations where underscores are common but spaces are invalid, Tailwind will preserve the underscore instead of converting it to a space, for example in URLs:
+En situaciones donde los guiones bajos son comunes pero los espacios no son válidos, Tailwind preservará el guion bajo en lugar de convertirlo en un espacio, por ejemplo, en URLs:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -152,7 +152,7 @@ In situations where underscores are common but spaces are invalid, Tailwind will
 </div>
 ```
 
-In the rare case that you actually need to use an underscore but it's ambiguous because a space is valid as well, escape the underscore with a backslash and Tailwind won't convert it to a space:
+En el raro caso de que realmente necesites usar un guion bajo pero sea ambiguo porque un espacio también es válido, escapa el guion bajo con una barra invertida y Tailwind no lo convertirá en un espacio:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -162,7 +162,7 @@ In the rare case that you actually need to use an underscore but it's ambiguous 
 </div>
 ```
 
-If you're using something like JSX where the backslash is stripped from the rendered HTML, use [String.raw()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw) so the backslash isn't treated as a JavaScript escape character:
+Si estás usando algo como JSX donde la barra invertida se elimina del HTML renderizado, usa [String.raw()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/raw) para que la barra invertida no se trate como un carácter de escape de JavaScript:
 
 ```jsx
 <div className={String.raw`before:content-['hello\_world']`}>
@@ -170,23 +170,23 @@ If you're using something like JSX where the backslash is stripped from the rend
 </div>
 ```
 
-### Resolving ambiguities
+### Resolviendo ambigüedades
 
-Many utilities in Tailwind share a common namespace but map to different CSS properties. For example `text-lg` and `text-black` both share the `text-` namespace, but one is for `font-size` and the other is for `color`.
+Muchas utilidades en Tailwind comparten un espacio de nombres común pero se asignan a diferentes propiedades CSS. Por ejemplo, `text-lg` y `text-black` comparten el espacio de nombres `text-`, pero uno es para `font-size` y el otro es para `color`.
 
-When using arbitrary values, Tailwind can generally handle this ambiguity automatically based on the value you pass in:
+Al usar valores arbitrarios, Tailwind generalmente puede manejar esta ambigüedad automáticamente basándose en el valor que le pases:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:text-[22px],text-[#bada55]] -->
-<!-- Will generate a font-size utility -->
+<!-- Generará una utilidad de font-size -->
 <div class="text-[22px]">...</div>
 
-<!-- Will generate a color utility -->
+<!-- Generará una utilidad de color -->
 <div class="text-[#bada55]">...</div>
 ```
 
-Sometimes it really is ambiguous though, for example when using CSS variables:
+Sin embargo, a veces es realmente ambiguo, por ejemplo, al usar variables CSS:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -194,21 +194,21 @@ Sometimes it really is ambiguous though, for example when using CSS variables:
 <div class="text-(--my-var)">...</div>
 ```
 
-In these situations, you can "hint" the underlying type to Tailwind by adding a [CSS data type](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types) before the value:
+En estas situaciones, puedes "sugerir" el tipo subyacente a Tailwind agregando un [tipo de datos CSS](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Types) antes del valor:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:text-(length:--my-var),text-(color:--my-var)] -->
-<!-- Will generate a font-size utility -->
+<!-- Generará una utilidad de font-size -->
 <div class="text-(length:--my-var)">...</div>
 
-<!-- Will generate a color utility -->
+<!-- Generará una utilidad de color -->
 <div class="text-(color:--my-var)">...</div>
 ```
 
-## Using custom CSS
+## Usando CSS personalizado
 
-While Tailwind is designed to handle the bulk of your styling needs, there is nothing stopping you from just writing plain CSS when you need to:
+Si bien Tailwind está diseñado para manejar la mayor parte de tus necesidades de estilo, no hay nada que te impida simplemente escribir CSS plano cuando lo necesites:
 
 ```css
 /* [!code filename:CSS] */
@@ -220,9 +220,9 @@ While Tailwind is designed to handle the bulk of your styling needs, there is no
 }
 ```
 
-### Adding base styles
+### Agregando estilos base
 
-If you just want to set some defaults for the page (like the text color, background color, or font family), the easiest option is just adding some classes to the `html` or `body` elements:
+Si solo quieres establecer algunos valores predeterminados para la página (como el color del texto, el color de fondo o la familia de fuentes), la opción más fácil es simplemente agregar algunas clases a los elementos `html` o `body`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -233,9 +233,9 @@ If you just want to set some defaults for the page (like the text color, backgro
 </html>
 ```
 
-This keeps your base styling decisions in your markup alongside all of your other styles, instead of hiding them in a separate file.
+Esto mantiene tus decisiones de estilo base en tu marcado junto con todos tus otros estilos, en lugar de ocultarlas en un archivo separado.
 
-If you want to add your own default base styles for specific HTML elements, use the `@layer` directive to add those styles to Tailwind's `base` layer:
+Si deseas agregar tus propios estilos base predeterminados para elementos HTML específicos, usa la directiva `@layer` para agregar esos estilos a la capa `base` de Tailwind:
 
 ```css
 /* [!code filename:CSS] */
@@ -252,11 +252,11 @@ If you want to add your own default base styles for specific HTML elements, use 
 }
 ```
 
-### Adding component classes
+### Agregando clases de componentes
 
-Use the `components` layer for any more complicated classes you want to add to your project that you'd still like to be able to override with utility classes.
+Usa la capa `components` para cualquier clase más complicada que quieras agregar a tu proyecto y que aún quieras poder sobrescribir con clases de utilidad.
 
-Traditionally these would be classes like `card`, `btn`, `badge` — that kind of thing.
+Tradicionalmente, estas serían clases como `card`, `btn`, `badge`, ese tipo de cosas.
 
 ```css
 /* [!code filename:CSS] */
@@ -272,20 +272,20 @@ Traditionally these would be classes like `card`, `btn`, `badge` — that kind o
 }
 ```
 
-By defining component classes in the `components` layer, you can still use utility classes to override them when necessary:
+Al definir clases de componentes en la capa `components`, aún puedes usar clases de utilidad para sobrescribirlas cuando sea necesario:
 
 ```html
 <!-- [!code filename:HTML] -->
 <!-- [!code classes:card,rounded-none] -->
-<!-- Will look like a card, but with square corners -->
+<!-- Se verá como una tarjeta, pero con esquinas cuadradas -->
 <div class="card rounded-none">
   <!-- ... -->
 </div>
 ```
 
-Using Tailwind you probably don't need these types of classes as often as you think. Read our guide on [managing duplication](/docs/styling-with-utility-classes#managing-duplication) for our recommendations.
+Usando Tailwind, probablemente no necesites este tipo de clases tan a menudo como crees. Lee nuestra guía sobre [gestión de la duplicación](/docs/styling-with-utility-classes#managing-duplication) para nuestras recomendaciones.
 
-The `components` layer is also a good place to put custom styles for any third-party components you're using:
+La capa `components` también es un buen lugar para poner estilos personalizados para cualquier componente de terceros que estés usando:
 
 ```css
 /* [!code filename:CSS] */
@@ -296,9 +296,9 @@ The `components` layer is also a good place to put custom styles for any third-p
 }
 ```
 
-### Using variants
+### Usando variantes
 
-Use the `@variant` directive to apply a Tailwind variant within custom CSS:
+Usa la directiva `@variant` para aplicar una variante de Tailwind dentro de CSS personalizado:
 
 <CodeExampleStack>
 
@@ -328,7 +328,7 @@ Use the `@variant` directive to apply a Tailwind variant within custom CSS:
 
 </CodeExampleStack>
 
-If you need to apply multiple variants at the same time, use nesting:
+Si necesitas aplicar múltiples variantes al mismo tiempo, usa anidamiento:
 
 <CodeExampleStack>
 
@@ -364,13 +364,13 @@ If you need to apply multiple variants at the same time, use nesting:
 
 </CodeExampleStack>
 
-## Adding custom utilities
+## Agregando utilidades personalizadas
 
-### Simple utilities
+### Utilidades simples
 
-In addition to using the utilities that ship with Tailwind, you can also add your own custom utilities. This can be useful when there's a CSS feature you'd like to use in your project that Tailwind doesn't include utilities for out of the box.
+Además de usar las utilidades que vienen con Tailwind, también puedes agregar tus propias utilidades personalizadas. Esto puede ser útil cuando hay una característica de CSS que te gustaría usar en tu proyecto para la cual Tailwind no incluye utilidades listas para usar.
 
-Use the `@utility` directive to add a custom utility to your project:
+Usa la directiva `@utility` para agregar una utilidad personalizada a tu proyecto:
 
 ```css
 /* [!code filename:CSS] */
@@ -379,7 +379,7 @@ Use the `@utility` directive to add a custom utility to your project:
 }
 ```
 
-You can now use this utility in your HTML:
+Puedes usar esta utilidad en tu HTML ahora:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -389,7 +389,7 @@ You can now use this utility in your HTML:
 </div>
 ```
 
-It will also work with variants like `hover`, `focus` and `lg`:
+También funcionará con variantes como `hover`, `focus` y `lg`:
 
 ```html
 <!-- [!code filename:HTML] -->
@@ -399,11 +399,11 @@ It will also work with variants like `hover`, `focus` and `lg`:
 </div>
 ```
 
-Custom utilities are automatically inserted into the `utilities` layer along with all of the built-in utilities in the framework.
+Las utilidades personalizadas se insertan automáticamente en la capa `utilities` junto con todas las utilidades incorporadas en el framework.
 
-### Complex utilities
+### Utilidades complejas
 
-If your custom utility is more complex than a single class name, use nesting to define the utility:
+Si tu utilidad personalizada es más compleja que un solo nombre de clase, usa anidamiento para definir la utilidad:
 
 ```css
 /* [!code filename:CSS] */
@@ -414,9 +414,9 @@ If your custom utility is more complex than a single class name, use nesting to 
 }
 ```
 
-### Functional utilities
+### Utilidades funcionales
 
-In addition to registering simple utilities with the `@utility` directive, you can also register functional utilities that accept an argument:
+Además de registrar utilidades simples con la directiva `@utility`, también puedes registrar utilidades funcionales que aceptan un argumento:
 
 ```css
 /* [!code filename:CSS] */
@@ -426,11 +426,11 @@ In addition to registering simple utilities with the `@utility` directive, you c
 }
 ```
 
-The special `--value()` function is used to resolve the utility value.
+La función especial `--value()` se utiliza para resolver el valor de la utilidad.
 
-#### Matching theme values
+#### Coincidencia con valores del tema
 
-Use the `--value(--theme-key-*)` syntax to resolve the utility value against a set of theme keys:
+Usa la sintaxis `--value(--theme-key-*)` para resolver el valor de la utilidad contra un conjunto de claves del tema:
 
 ```css
 /* [!code filename:CSS] */
@@ -447,11 +447,11 @@ Use the `--value(--theme-key-*)` syntax to resolve the utility value against a s
 }
 ```
 
-This will match utilities like `tab-2`, `tab-4`, and `tab-github`.
+Esto coincidirá con utilidades como `tab-2`, `tab-4` y `tab-github`.
 
-#### Bare values
+#### Valores básicos
 
-To resolve the value as a bare value, use the `--value({type})` syntax, where `{type}` is the data type you want to validate the bare value as:
+Para resolver el valor como un valor básico, usa la sintaxis `--value({type})`, donde `{type}` es el tipo de datos con el que deseas validar el valor básico:
 
 ```css
 /* [!code filename:CSS] */
@@ -460,11 +460,11 @@ To resolve the value as a bare value, use the `--value({type})` syntax, where `{
 }
 ```
 
-This will match utilities like `tab-1` and `tab-76`.
+Esto coincidirá con utilidades como `tab-1` y `tab-76`.
 
-#### Literal values
+#### Valores literales
 
-To support literal values, use the `--value('literal')` syntax (notice the quotes):
+Para admitir valores literales, usa la sintaxis `--value('literal')` (observa las comillas):
 
 ```css
 /* [!code filename:CSS] */
@@ -473,11 +473,11 @@ To support literal values, use the `--value('literal')` syntax (notice the quote
 }
 ```
 
-This will match utilities like `tab-inherit`, `tab-initial`, and `tab-unset`.
+Esto coincidirá con utilidades como `tab-inherit`, `tab-initial` y `tab-unset`.
 
-#### Arbitrary values
+#### Valores arbitrarios
 
-To support arbitrary values, use the `--value([{type}])` syntax (notice the square brackets) to tell Tailwind which types are supported as an arbitrary value:
+Para admitir valores arbitrarios, usa la sintaxis `--value([{type}])` (observa los corchetes) para indicarle a Tailwind qué tipos son compatibles como valor arbitrario:
 
 ```css
 /* [!code filename:CSS] */
@@ -486,11 +486,11 @@ To support arbitrary values, use the `--value([{type}])` syntax (notice the squa
 }
 ```
 
-This will match utilities like `tab-[1]` and `tab-[76]`. If you want to support any data type, you can use `--value([*])`.
+Esto coincidirá con utilidades como `tab-[1]` y `tab-[76]`. Si deseas admitir cualquier tipo de datos, puedes usar `--value([*])`.
 
-#### Supporting theme, bare, and arbitrary values together
+#### Admitiendo valores de tema, básicos y arbitrarios juntos
 
-All three forms of the `--value()` function can be used within a rule as multiple declarations, and any declarations that fail to resolve will be omitted in the output:
+Las tres formas de la función `--value()` se pueden usar dentro de una regla como múltiples declaraciones, y cualquier declaración que no se resuelva se omitirá en la salida:
 
 ```css
 /* [!code filename:CSS] */
@@ -506,7 +506,7 @@ All three forms of the `--value()` function can be used within a rule as multipl
 }
 ```
 
-This makes it possible to treat the value differently in each case if necessary, for example translating a bare integer to a percentage:
+Esto permite tratar el valor de manera diferente en cada caso si es necesario, por ejemplo, traduciendo un entero básico a un porcentaje:
 
 ```css
 /* [!code filename:CSS] */
@@ -519,7 +519,7 @@ This makes it possible to treat the value differently in each case if necessary,
 }
 ```
 
-The `--value()` function can also take multiple arguments and resolve them left to right if you don't need to treat the return value differently in different cases:
+La función `--value()` también puede tomar múltiples argumentos y resolverlos de izquierda a derecha si no necesitas tratar el valor de retorno de manera diferente en distintos casos:
 
 ```css
 /* [!code filename:CSS] */
@@ -541,9 +541,9 @@ The `--value()` function can also take multiple arguments and resolve them left 
 }
 ```
 
-#### Negative values
+#### Valores negativos
 
-To support negative values, register separate positive and negative utilities into separate declarations:
+Para admitir valores negativos, registra utilidades positivas y negativas separadas en declaraciones distintas:
 
 ```css
 /* [!code filename:CSS] */
@@ -557,9 +557,9 @@ To support negative values, register separate positive and negative utilities in
 }
 ```
 
-#### Modifiers
+#### Modificadores
 
-Modifiers are handled using the `--modifier()` function which works exactly like the `--value()` function but operates on a modifier if present:
+Los modificadores se manejan usando la función `--modifier()`, que funciona exactamente igual que la función `--value()` pero opera sobre un modificador si está presente:
 
 ```css
 /* [!code filename:CSS] */
@@ -572,11 +572,11 @@ Modifiers are handled using the `--modifier()` function which works exactly like
 }
 ```
 
-If a modifier isn't present, any declaration depending on a modifier is just not included in the output.
+Si no hay un modificador presente, cualquier declaración que dependa de un modificador simplemente no se incluye en la salida.
 
-#### Fractions
+#### Fracciones
 
-To handle fractions, we rely on the CSS `ratio` data type. If this is used with `--value()`, it's a signal to Tailwind to treat the value and modifier as a single value:
+Para manejar fracciones, dependemos del tipo de datos CSS `ratio`. Si se usa con `--value()`, es una señal para Tailwind para tratar el valor y el modificador como un solo valor:
 
 ```css
 /* [!code filename:CSS] */
@@ -587,11 +587,11 @@ To handle fractions, we rely on the CSS `ratio` data type. If this is used with 
 }
 ```
 
-This will match utilities like `aspect-square`, `aspect-3/4`, and `aspect-[7/9]`.
+Esto coincidirá con utilidades como `aspect-square`, `aspect-3/4` y `aspect-[7/9]`.
 
-## Adding custom variants
+## Agregando variantes personalizadas
 
-In addition to using the variants that ship with Tailwind, you can also add your own custom variants using the `@custom-variant` directive:
+Además de usar las variantes que vienen con Tailwind, también puedes agregar tus propias variantes personalizadas usando la directiva `@custom-variant`:
 
 ```css
 @custom-variant theme-midnight {
@@ -601,7 +601,7 @@ In addition to using the variants that ship with Tailwind, you can also add your
 }
 ```
 
-Now you can use the `theme-midnight:<utility>` variant in your HTML:
+Ahora puedes usar la variante `theme-midnight:<utility>` en tu HTML:
 
 ```html
 <!-- [!code classes:theme-midnight:bg-black] -->
@@ -610,13 +610,13 @@ Now you can use the `theme-midnight:<utility>` variant in your HTML:
 </html>
 ```
 
-You can create variants using the shorthand syntax when nesting isn't required:
+Puedes crear variantes usando la sintaxis abreviada cuando no se requiere anidamiento:
 
 ```css
 @custom-variant theme-midnight (&:where([data-theme="midnight"] *));
 ```
 
-When a custom variant has multiple rules, they can be nested within each other:
+Cuando una variante personalizada tiene múltiples reglas, se pueden anidar una dentro de la otra:
 
 ```css
 @custom-variant any-hover {

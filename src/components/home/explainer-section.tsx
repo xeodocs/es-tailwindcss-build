@@ -25,7 +25,7 @@ export default function ExplainerSection() {
           <span className="text-purple-300" aria-hidden="true">
             ≈
           </span>
-          <span aria-label="Tailwind CSS"> tailwindcss </span>
+          <span aria-label="Tailwind CSS en Español"> tailwindcss </span>
           <span className="text-purple-300">v4.0.0</span>
         </React.Fragment>,
         <span key="2"></span>,
