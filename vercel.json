@@ -17,8 +17,13 @@
     },
     {
       "source": "/plus/ui-kit",
-      "destination": "https://tailwindcss-es.com/plus/ui-kit",
+      "destination": "https://tailwindcss.com/plus/ui-kit",
       "permanent": true
-    }
+    },
+    {
+      "source": "/build-uis-that-dont-suck",
+      "destination": "https://tailwindcss.com/build-uis-that-dont-suck",
+      "permanent": true
+    }    
   ]
 } 
