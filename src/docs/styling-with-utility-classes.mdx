@@ -886,7 +886,7 @@ Así es como podría verse una clase `btn-primary`, usando [variables de tema](/
 
 </Figure>
 
-Again though, for anything that's more complicated than just a single HTML element, we highly recommend using template partials so the styles and structure can be encapsulated in one place.
+De nuevo, para cualquier cosa que sea más complicada que un solo elemento HTML, recomendamos encarecidamente usar parciales de plantilla para que los estilos y la estructura puedan encapsularse en un solo lugar.
 
 ## Manejando conflictos de estilo
 
@@ -916,7 +916,7 @@ Cuando agregas dos clases que apuntan a la misma propiedad CSS, la clase que apa
 
 </CodeExampleStack>
 
-In general, you should just never add two conflicting classes to the same element — only ever add the one you actually want to take effect:
+En general, nunca deberías añadir dos clases conflictivas al mismo elemento — añade solo la que realmente quieres que tenga efecto:
 
 ```jsx
 // [!code filename:example.jsx]
@@ -926,11 +926,11 @@ export function Example({ gridLayout }) {
 }
 ```
 
-Using component-based libraries like React or Vue, this often means exposing specific props for styling customizations instead of letting consumers add extra classes from outside of a component, since those styles will often conflict.
+Usando bibliotecas basadas en componentes como React o Vue, esto a menudo significa exponer props específicos para personalizaciones de estilo en lugar de permitir que los consumidores agreguen clases adicionales desde fuera de un componente, ya que esos estilos a menudo entrarán en conflicto.
 
 ### Usando el modificador important
 
-When you really need to force a specific utility class to take effect and have no other means of managing the specificity, you can add `!` to the end of the class name to make all of the declarations `!important`:
+Cuando realmente necesitas forzar que una clase de utilidad específica tenga efecto y no tienes otra forma de gestionar la especificidad, puedes añadir `!` al final del nombre de la clase para hacer que todas las declaraciones sean `!important`:
 
 <CodeExampleStack>
 
@@ -958,7 +958,7 @@ When you really need to force a specific utility class to take effect and have n
 
 ### Usando la bandera important
 
-If you're adding Tailwind to a project that has existing complex CSS with high specificity rules, you can use the `important` flag when importing Tailwind to mark _all_ utilities as `!important`:
+Si estás añadiendo Tailwind a un proyecto que tiene CSS complejo existente con reglas de alta especificidad, puedes usar la bandera `important` al importar Tailwind para marcar _todas_ las utilidades como `!important`:
 
 <CodeExampleStack>
 
@@ -988,7 +988,7 @@ If you're adding Tailwind to a project that has existing complex CSS with high s
 
 ### Usando la opción prefix
 
-If your project has class names that conflict with Tailwind CSS utilities, you can prefix all Tailwind-generated classes and CSS variables using the `prefix` option:
+Si tu proyecto tiene nombres de clase que entran en conflicto con las utilidades de Tailwind CSS, puedes prefijar todas las clases y variables CSS generadas por Tailwind usando la opción `prefix`:
 
 <CodeExampleStack>
 

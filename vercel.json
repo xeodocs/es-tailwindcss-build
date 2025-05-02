@@ -1,0 +1,24 @@
+{
+  "redirects": [
+    {
+      "source": "/plus?ref=top",
+      "destination": "https://tailwindcss.com/plus?ref=top",
+      "permanent": true
+    },
+    {
+      "source": "/plus/ui-blocks?ref=sidebar",
+      "destination": "https://tailwindcss.com/plus/ui-blocks?ref=sidebar",
+      "permanent": true
+    },
+    {
+      "source": "/plus/templates?ref=sidebar",
+      "destination": "https://tailwindcss.com/plus/templates?ref=sidebar",
+      "permanent": true
+    },
+    {
+      "source": "/plus/ui-kit?ref=sidebar",
+      "destination": "https://tailwindcss-es.com/plus/ui-kit?ref=sidebar",
+      "permanent": true
+    }
+  ]
+} 
