@@ -21,5 +21,3 @@ pnpm run dev
 ## License
 
 This project is not licensed under an open-source license and is the intellectual property of Tailwind Labs Inc. The source is available only as an educational resource and to accept fixes for minor mistakes.
-
-.
