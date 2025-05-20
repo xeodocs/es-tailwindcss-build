@@ -12,3 +12,5 @@ About translations of texts from English to Spanish:
 - Never modify HTML, Markdown or any other formatting structures, only edit text content
 - Always use neutral Latin American Spanish
 - Always translate literally whenever possible, avoid rephrasing
+- Always editing the source files, never creating new files
+- Always covering all the texts of each file
